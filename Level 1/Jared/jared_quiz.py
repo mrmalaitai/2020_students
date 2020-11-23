@@ -1,36 +1,53 @@
-print(" __       __  ________  __        ______    ______   __       __  ______  __    __   ______  ")
-print("|  \  _  |  \|        \|  \      /      \  /      \ |  \     /  \|      \|  \  |  \ /      \ ")
-print("| $$ / \ | $$| $$$$$$$$| $$     |  $$$$$$\|  $$$$$$\| $$\   /  $$ \$$$$$$| $$\ | $$|  $$$$$$\ ")
-print("| $$/  $\| $$| $$__    | $$     | $$   \$$| $$  | $$| $$$\ /  $$$  | $$  | $$$\| $$| $$ __\$$")
-print("| $$  $$$\ $$| $$  \   | $$     | $$      | $$  | $$| $$$$\  $$$$  | $$  | $$$$\ $$| $$|    \ ")
-print("| $$ $$\$$\$$| $$$$$   | $$     | $$   __ | $$  | $$| $$\$$ $$ $$  | $$  | $$\$$ $$| $$ \$$$$")
-print("| $$$$  \$$$$| $$_____ | $$_____| $$__/  \| $$__/ $$| $$ \$$$| $$ _| $$_ | $$ \$$$$| $$__| $$")
-print("| $$$    \$$$| $$     \| $$     \\$$    $$ \$$    $$| $$  \$ | $$|   $$ \| $$  \$$$ \$$    $$")
-print(" \$$      \$$ \$$$$$$$$ \$$$$$$$$ \$$$$$$   \$$$$$$  \$$      \$$ \$$$$$$ \$$   \$$  \$$$$$$")
+# Jared Huni
+# Quiz about General Knowledge
 
-print()
-print("========================================================================================================")
+# Welcome function which prints a nice welcome message
+def welcome():
+    print(" __       __  ________  __        ______    ______   __       __  ______  __    __   ______  ")
+    print("|  \  _  |  \|        \|  \      /      \  /      \ |  \     /  \|      \|  \  |  \ /      \ ")
+    print("| $$ / \ | $$| $$$$$$$$| $$     |  $$$$$$\|  $$$$$$\| $$\   /  $$ \$$$$$$| $$\ | $$|  $$$$$$\ ")
+    print("| $$/  $\| $$| $$__    | $$     | $$   \$$| $$  | $$| $$$\ /  $$$  | $$  | $$$\| $$| $$ __\$$")
+    print("| $$  $$$\ $$| $$  \   | $$     | $$      | $$  | $$| $$$$\  $$$$  | $$  | $$$$\ $$| $$|    \ ")
+    print("| $$ $$\$$\$$| $$$$$   | $$     | $$   __ | $$  | $$| $$\$$ $$ $$  | $$  | $$\$$ $$| $$ \$$$$")
+    print("| $$$$  \$$$$| $$_____ | $$_____| $$__/  \| $$__/ $$| $$ \$$$| $$ _| $$_ | $$ \$$$$| $$__| $$")
+    print("| $$$    \$$$| $$     \| $$     \\$$    $$ \$$    $$| $$  \$ | $$|   $$ \| $$  \$$$ \$$    $$")
+    print(" \$$      \$$ \$$$$$$$$ \$$$$$$$$ \$$$$$$   \$$$$$$  \$$      \$$ \$$$$$$ \$$   \$$  \$$$$$$")
 
+    print()
+    print("========================================================================================================")
+
+# Welcomes user with their name and prints to out
 def introduction(name):
     print("Welcome {} to my quiz".format(name))
+
+# Prints highscore and name to txt file
 def highscore(name, score):
+    # Opens and writes name and score to a txt file
     file =open("highscore.txt", "a")
     file.write("{} has a score of {}\n".format(name, score))
     file.close()
-    
+
+# Intiating score = 0
+score=0
+
+# Access welcome message
+welcome()
+
+# Asks the user for their name
 name=input("What is your name?\n>>" ) 
 introduction(name)
 
-
 print()
 print("=======================================================================================================")
-score=0
 
 
-#def q1():
+
+# First quetion in a while loop. If user response is not one of the answers, the while loop will loop again.
+# Each question is repeated in the same way
 while(True): 
-    print("Who is the oldest Kardashian? \nA Khole Kardashian\nB Kim Kardashian \nC Kourtney Kardashian\nD Rob Kardashian ")
+    print("\nWho is the oldest Kardashian? \nA Khole Kardashian\nB Kim Kardashian \nC Kourtney Kardashian\nD Rob Kardashian ")
     q1=input(">>")
+    # List variable of options for user to choose from
     abc = ["a","b","c","d","Khole Kardashian","Kim Kardashian","Kourtney Kardashian","Rob Kardashian"]
     if(q1 not in abc):
 
@@ -47,9 +64,9 @@ while(True):
         print("=======================================================================================================")
         break
 
-#def q2():
+# As above, the second question is similar to the first question with if-and-else statements.s
 while(True):
-    print(" when was Albert Einstein born? \A 1856 \ B 1882 \ C 1792 \ D 1879")
+    print("\nWhen was Albert Einstein born? \nA 1856 \nB 1882 \nC 1792 \nD 1879")
     q2=input(">>")
     abc = ["a","b","c","d","1856","1882","1792","1879"]
     if(q2 not in abc):
@@ -70,7 +87,7 @@ print("=========================================================================
  
 #def q3():
 while(True):
-    print("How many rings does Michael Jordan have? \nA Six\nB Five\nC Seven\nD Four ")
+    print("\nHow many rings does Michael Jordan have? \nA Six\nB Five\nC Seven\nD Four ")
     q3=input(">>")
     abc= ["a","b","c","d","Six","Five","Seven","Four"]
     if(q3 not in abc):
@@ -89,7 +106,7 @@ while(True):
         
 #def q4():
 while(True):
-    print("When did Usher's song BURN get released? \nA 2003\nB 2001\nC 2006\nD 2004 ")
+    print("\nWhen did Usher's song BURN get released? \nA 2003\nB 2001\nC 2006\nD 2004 ")
     q4=input(">>")
     abc= ["a", "b", "c", "d", "2003", "2001", "2006", "2004"]
     if(q4 not in abc):
@@ -108,7 +125,7 @@ while(True):
         
 #def q5():
 while(True):
-    print("What is the current world record time for the 100m? \nA 9.58\nB 9.31\nC 10.01\nD 10.26 ")
+    print("\nWhat is the current world record time for the 100m? \nA 9.58\nB 9.31\nC 10.01\nD 10.26 ")
     q5=input(">>")
     abc= ["a","b","c","d", "9.58", "9.31", "10.01", "10.26" ]
     if(q5 not in abc):
@@ -127,7 +144,7 @@ while(True):
         
 #def q6():
 while(True):
-    print("Which celebrity has the most followers on twitter? \nA donald trump\nB beyonce\nC barrack obama\nD chris brown")
+    print("\nWhich celebrity has the most followers on twitter? \nA donald trump\nB beyonce\nC barrack obama\nD chris brown")
     q6=input(">>")
     abc= ["a", "b", "c", "d", "donald trump", "beyonce", "barrack obama", "chris brown" ]
     if(q5 not in abc):
@@ -146,7 +163,7 @@ while(True):
         
 #def q7():
 while(True):
-    print("When is Jared's birthday? \nA 25.12.04\nB 25.06.04\nC 05.03.05\nD 13.11.12")
+    print("\nWhen is Jared's birthday? \nA 25.12.04\nB 25.06.04\nC 05.03.05\nD 13.11.12")
     q7=input(">>")
     abc= ["a", "b", "c", "d", "25.12.04", "25.06.04", "05.03.04", "13.11.12" ]
     if(q7 not in abc):
@@ -165,7 +182,7 @@ while(True):
 
 #def q8():
 while(True):
-    print("Who was the first superman actor? \nA clark kent\nB george reeves\nC bruce wayne\nD tom hanks")
+    print("\nWho was the first superman actor? \nA clark kent\nB george reeves\nC bruce wayne\nD tom hanks")
     q8=input(">>")
     abc= ["a", "b", "c", "d", "clark kent", "geogre reeves", "bruce wayne", "tom hanks" ]
     if(q8 not in abc):
@@ -184,7 +201,7 @@ while(True):
         
 #def q9():
 while(True): 
-    print(" How old is KSI? \nA 26\nB 28\nC 29\nD 27")
+    print("\nHow old is KSI? \nA 26\nB 28\nC 29\nD 27")
     q9=input(">>")
     abc= [ "a", "b", "c", "d", "26", "28", "29", "27" ]
     if(q9 not in abc):
@@ -202,7 +219,7 @@ while(True):
         
 #def q10():
 while(True):
-    print(" When did bruce lee die \nA 1956\nB 1978\nC 1966\nD 1973 ")
+    print("\nWhen did bruce lee die \nA 1956\nB 1978\nC 1966\nD 1973 ")
     q10=input(">>")
     abc=[ "a", "b", "c", "d", "1956", "1978", "1966", "1973" ]
     if(q10  not in abc):
@@ -218,5 +235,8 @@ while(True):
         print(" WHATT HAPPEEENNEEDDD DRRIIFFFTTEERRRR")
         print("=======================================================================================================")
         break 
-        
+
+print("{}, you got {} questions correct out of 10.\n".format(name, score))
+
+# Access the highscore function and adds user's name and score
 highscore(name, score)

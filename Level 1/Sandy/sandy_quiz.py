@@ -1,4 +1,5 @@
 
+# introduction function for pretty message "NBA RULES" and welcomes user
 def introduction(name):
     print("================================================================================================")
     print()
@@ -17,21 +18,26 @@ def introduction(name):
     print()
     print("Welcome {} to my Quiz".format(name))
 
- 
-
+# Adds name and questions correct at the end of the program
 def highscore(name, score):
     file = open("highscores.txt", "a")
     file.write("{} has a score of {}\n".format(name, score))
     file.close()
+
+# conclusion message for user
+def conclusion():
+    print("yes you finished the quiz. thanks for playing the quiz!!")
+
+# Asks the name of the user and welcomes with introduction functino
 name = input("What is your name?\n>>")
 introduction(name)
 print("================================================================================")
 print()
-score = 10
+score = 0
 
-
-
-
+# question 1 has loop so if any question answered not from options, repeat loop.
+# If correct, add score + 1 and next question. If incorrect, next question.
+# Repeat for following questions.
 while(True):
     q1 = input("what is it called when a player grabs a missed shot?\nA) take away\nB) rebound\nC) hold\nD) steal\n== ")
     
@@ -48,6 +54,7 @@ while(True):
         print("try again")
         print()
 
+# Question 2
 while(True):
     q2 = input("why does an offense get two points if the ball is tipped above the rim by a defender?\nA) early blocking foul\nB) scoring block\nC) stoppage\nD) goaltending\n>> ")
     
@@ -62,10 +69,10 @@ while(True):
         print("Incorrect")
         break
     else:
-        print("so close")
+        print("try again")
         print()
     
-
+# Question 3
 while(True):
     q3 = input("each team is allowed to put how many players on the court?\nA) six\nB) 3\nC) five\nD) 7\n== ")
     incorrect = ["a", "b", "d"]
@@ -78,10 +85,10 @@ while(True):
         print("Incorrect")
         break
     else:
-        print("nearly")
+        print("try again")
         print()
     
-
+# Question 4
 while(True):
     q4 = input("are you familiar with how the NBA determines who gets the basketball to start a game?\nA) tip off\nB) coin flip\nC) away team\nD) home team\n>> ")
     incorrect = ["d", "b", "c"]
@@ -94,11 +101,11 @@ while(True):
         print("Incorrect")
         break
     else:
-        print("not quite")
+        print("try again")
         print()
         
         
-
+# Question 5
 while(True):
     q5 = input("do you know which position is typically responsible for orchestrating an offense?\nA) shooting guard \nB) pointing guard\nC) point guard\nD) center\n== ")
     incorrect = ["a", "b", "d"]
@@ -111,9 +118,10 @@ while(True):
         print("Incorrect")
         break
     else:
-        print("my brain is not functioning")
+        print("try again")
         print()
         
+# Question 6        
 while(True):
     q6 = input("if a player wants to substitute into the game, they must go where?\nA) scorer's table\nB) entrance\nC) substitute line\nD) judges table\n>> ")
     incorrect = ["d", "b", "c"]
@@ -126,10 +134,10 @@ while(True):
         print("Incorrect")
         break
     else:
-        print("almost right")
+        print("try again")
         print()
 
-
+# Question 7
 while(True):
     q7 = input("the best players can get inside for an easy lay up, which is worth how many points?\nA) twoo points\nB) 2 points\nC) 1 point\nD) onne point\n== ")
     incorrect = ["a", "d", "c"]
@@ -142,12 +150,12 @@ while(True):
         print("Incorrect")
         break
     else:
-        print("try harder")
+        print("try again")
         print()
     
 
 
-
+# Question 8
 while(True):
     q8 = input("where does a player go to shoot foul shots?\nA) penalty box\nB) side line\nC) base line\nD) foul line\n>> ")
     incorrect = ["a", "b", "c"]
@@ -160,10 +168,10 @@ while(True):
         print("Incorrect")
         break
     else:
-        print("nevermind repeat")
+        print("try again")
         print()
 
-
+# Question 9
 while(True):
     q9 = input("what type of defense requires each defender to play a single offensive player one on one?\nA) trap defense\nB) man defense\nC) defense\nD) zone defense\n== ")
     incorrect = ["a", "d", "c"]
@@ -176,11 +184,10 @@ while(True):
         print("Incorrect")
         break
     else:
-        print("again and again")
+        print("try again")
         print()
-print()
 
-
+# Question 10
 while(True):
     q10 = input("What is it called when an offensive player without the ball sets a screen then moves towards the basket?\nA) power screen\nB) screen\nC) pick and roll\nD) hold\n>> ")
     incorrect = ["a", "b", "d"]
@@ -193,13 +200,9 @@ while(True):
         print("Incorrect")
         break
     else:
-        print("its the last question")
+        print("try again")
         print()
 
-
-def conclusion():
-    print("yes you finished the quiz. how did you do? thanks for playing the quiz!!")
-
+# Prints conclusion method and prints the name and score to a highscores.txt.
 conclusion()
-
 highscore(name, score)
