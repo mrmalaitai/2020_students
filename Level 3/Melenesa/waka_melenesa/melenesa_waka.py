@@ -1,20 +1,20 @@
 import tkinter as tk
 from os import walk
 
-
+# This function displays the clubs using a second window
 def display_clubs(clubs):
     window = tk.Toplevel(root)
     window.title("Full Club Points")
-    window.iconbitmap("boats.ico")
+    window.iconbitmap("icon.ico")
     
     #Turn dict into list 
     results = [ [k,v] for k, v in clubs.items() ]
     
     #order list
     results.sort(key = lambda x: x[1])
-    print(results)
+    #print(results)
     #Display list
-    results_listbox = tk.Listbox(window, width = 50, height = 50, font = ("Arial", ))
+    results_listbox = tk.Listbox(window, width = 50, height = 50, font = ("Arial", ), bg=BG_COLOUR)
     
     #Adds each waka tot he Listbox "results_listbox"
     for x in results:
@@ -26,7 +26,7 @@ def display_clubs(clubs):
         results_listbox.insert(0, current_waka)
         
     results_listbox.grid(row = 0, column = 0)
-    print(results)
+    #print(results)
     
 def calculate_scores(current_year, final_races):
     clubs = {}
@@ -64,12 +64,13 @@ def calculate_scores(current_year, final_races):
                 clubs[waka[5]] = clubs.get(waka[5]) + score
             
         current_race.close()
-    print(clubs)
+    #print(clubs)
     
 
     
     display_clubs(clubs)
 
+# This function displays the 2017 and 2018 folders to choose from.
 def display_files():
     races = []
     current_years = years_chosen.get()
@@ -98,7 +99,7 @@ for root, dirs, files in walk("."):
 # years = ["Wakanats 2017", "Wakanats 2018"]
 
 BG_COLOUR = "PINK"
-FG_COLOUR = "WHITE"
+FG_COLOUR = "BLACK"
 root = tk.Tk()
 
 #this code sets the color of my background
@@ -108,7 +109,7 @@ root.configure(background = BG_COLOUR)
 root.title("Leaderboard")
 
 #this code places my photo of my boat
-root.wm_iconbitmap("boats.ico")
+root.wm_iconbitmap("icon.ico")
 
 #this code shows the title
 title = tk.Label(root, text = "Waka Ama\nCompetition",font = ("Arial", 20),bg = BG_COLOUR, fg = FG_COLOUR)
@@ -124,7 +125,7 @@ years_chosen.set("Select a year:")
 years_options = tk.OptionMenu(root, years_chosen, *years)
 years_options.grid(row = 2, column = 0)
 
-button = tk.Button(root, text = "Display files", command = display_files,font = ("Arial", "12"))
+button = tk.Button(root, text = "Display files", command = display_files,font = ("Arial", "12"), bg = BG_COLOUR)
 button.grid(row = 3, column = 0)
 
 root.mainloop()

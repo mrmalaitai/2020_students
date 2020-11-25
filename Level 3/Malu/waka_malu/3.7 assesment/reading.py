@@ -1,6 +1,5 @@
 #Created by: Maluofenua Sautia
-#Date: 03/06/2020
-#
+#Date: 03/11/2020
 
 
 import tkinter as tk
@@ -11,16 +10,17 @@ from os import walk
 def display_clubs(clubs):
     display = tk.Toplevel(root)
     display.title("Full Club Points")
-    #display.iconbitmap("waka.ico")
+    display.iconbitmap("waka.ico")
     
     #this code is for to turn the dict to list
     results = [ [k,v] for k, v in clubs.items() ]
+    
     
     #this code is to put the points in Order list
     results.sort(key = lambda x: x[1])
     
     #this code is the display code
-    results_listbox = tk.Listbox(display, width = 38, height = 64, font = ("Arial",8))
+    results_listbox = tk.Listbox(display, width = 38, height = 64, font = ("Arial",8), bg=BG_COLOR)
     
     # Adds each waka to the listbox "result_listbox"
     for x in results:
@@ -116,7 +116,7 @@ for root, dirs, files in walk("."):
     
 # schools = ["Marvel High School", "DC College"]
 BG_COLOR = "#00FFFF"
-FG_COLOR = "WHITE"
+FG_COLOR = "#000000"
 root = tk.Tk()
 root.title("Waka comp Results")
 root.iconbitmap("waka.ico")

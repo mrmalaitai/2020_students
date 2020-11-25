@@ -136,7 +136,7 @@ root = tk.Tk()
 
 root.title("Waka Ama Sprint Nationals")
 root.configure(bg=BG_COLOUR)
-root.iconbitmap("award.ico")
+root.iconbitmap("Level 3\Mervyn\WakaNats2018_mervyn\images\icon.ico")
 
 #By: inipagi
 #https://icon-icons.com/icon/Trophy-winner-award/82485
