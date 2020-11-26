@@ -27,8 +27,9 @@ def display_clubs(clubs):
         
     results_listbox.grid(row = 0, column = 0)
     #print(results)
-    
-def calculate_scores(current_year, final_races):
+
+# This function calculats the points for the teams from 1st to last
+def points(current_year, final_races):
     clubs = {}
     # This code shows the years for the code 
     for race in final_races:
@@ -38,30 +39,30 @@ def calculate_scores(current_year, final_races):
         for club in current_race:
             waka = club.strip().split(",")
             
-            # The code below shows the score
-            score = 0
+            # The code below shows the points
+            points = 0
             
             if(waka[0] == "1"):
-                score = 8
+                points = 8
             elif(waka[0] == "2"):
-                score = 7
+                points = 7
             elif(waka[0] == "3"):
-                score = 6
+                points = 6
             elif(waka[0] == "4"):
-                score = 5
+                points = 5
             elif(waka[0] == "5"):
-                score = 4
+                points = 4
             elif(waka[0] == "6"):
-                score = 3
+                points = 3
             elif(waka[0] == "7"):
-                score = 2
+                points = 2
             else:
-                score = 1
+                points = 1
                 
             if(waka[5] not in clubs):
-                clubs[waka[5]] = score
+                clubs[waka[5]] = points
             else:
-                clubs[waka[5]] = clubs.get(waka[5]) + score
+                clubs[waka[5]] = clubs.get(waka[5]) + points
             
         current_race.close()
     #print(clubs)
@@ -82,13 +83,11 @@ def display_files():
     
     final_races = []
     
-    FINAL_NAMES = []
-    
     for race in races:
         if("Final" in race):
             final_races.append(race)
     #print(final_races) 
-    calculate_scores(current_years, final_races)
+    points(current_years, final_races)
 
 years = []
 
