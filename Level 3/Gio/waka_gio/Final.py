@@ -76,18 +76,7 @@ def calculate_scores(current_year, final_races):
             
         current_race.close()
         
-#    for x in clubs:
- #       print(x,clubs[x])
-  #      
-   #     for club in current_year:
-    #        club = club.strip90.split(",")
-     #       if(club[1] not in clubs):
-      #          students[club[1]] = int(club[5])
-       #     else:
-        #        club[club[1]] = score
-                  
-        #current_year.close()
-    #display_club(clubs)
+
     
             # Converting into dictionary list
     print(clubs)
@@ -98,14 +87,14 @@ def display_files():
     races = []
     current_year = year_chosen.get()
     
+    # Loops through all races in the directory and adds to a list
     for root, dirs, files in walk("{}".format(current_year)):
         races.extend(files)
         break
         
     final_races = []
         
-    FINAL_NAMES = ["Final"]
-        
+    # Loops through all races and finds "Final" races    
     for race in races:
         if("Final" in race):
             final_races.append(race)
@@ -115,13 +104,15 @@ def display_files():
     
 years = []
 
+# for loop for looking through folders in the 2017 folder or 2018 folder
 for root, dirs, files in walk("."):
     years.extend(dirs)
     break
 
-#The Background Colour
+# CONSTANTS
+# The Background Colour
 BG_COLOUR="#C933FF"# Purple
-#The Font Colour
+# The Font Colour
 FG_COLOUR="#5FFF33"# Green
 root = tk.Tk()
 
