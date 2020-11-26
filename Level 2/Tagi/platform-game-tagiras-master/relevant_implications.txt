@@ -1,0 +1,8 @@
+Functionality simply looks at whether the product functions as intended and to ensure there are no problems, bugs, crashes etc.
+The game works fine and is easy to play. There are no bugs so far but can be easily updated if found.
+
+Intellectual Property is when the works belong to the creator and who has the right to use it. 
+I drew the player, enemy, objects to ensure there was no copyright problems.
+
+The End user is the user who will be using the product. The product should cater to the specific needs of that user.
+People who might like this game are gamers who have a good sense of direction for controls. I made sure it was easy to use by only allowing 4 keys so not only gamers but any one could play.

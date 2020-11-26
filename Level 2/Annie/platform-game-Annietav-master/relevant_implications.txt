@@ -1,0 +1,14 @@
+Intellectual Property focuses on whether the creation or ideas belong to the creator. In this instance, IP looks at whether the game I created has used or borrowed from other people's work. If so, is the work free to use (public domain), require payment, or do they forbid the use of their IP.
+The images used in the game are all hand drawn as to ensure there is no copyright problems. None of the images used are borrowed from other creators.
+
+The End user is the user who will be using the product. The product should cater to the specific needs of that user.
+The purpose of the game is for the enjoyment of the user.  The user is tasked to complete the level.
+The game requires practice as to ensure the user becomes familiar with the controls and obstacles.
+The demographic is towards those who enjoy games which the outcome seems to cater to.
+
+Functionality simply looks at whether the product functions as intended and to ensure there are no problems, bugs, crashes etc.
+The game loads relatively quickly.
+There are minor "bugs" but can only be seen if the user does something outside of the scope of the game. This is not possible under normal circumstances.
+
+Aesthetics is the look and design of the product.
+The game has clear black floors with a clear monster chasing to ensure there is no problems with those that might be visually impaired.

@@ -76,6 +76,8 @@ def creeper_chase(player_rect, creeper_rect):
     if((player_rect.x + PLAYER_W >= creeper_rect.x and player_rect.y + PLAYER_H >= creeper_rect.y) and (player_rect.x <= creeper_rect.x + CREEPER_W and player_rect.y + PLAYER_H >= creeper_rect.y) and (player_rect.x + PLAYER_W >= creeper_rect.x and player_rect.y <= creeper_rect.y + CREEPER_H) and (player_rect.x <= creeper_rect.x + CREEPER_W and player_rect.y <= creeper_rect.y + CREEPER_H)):
         player_rect.x = 164
         player_rect.y = 483
+        creeper_rect.x = 0
+        creeper_rect.y = 483
  
     return()    
 
@@ -171,7 +173,7 @@ while True: # game loop
     display.blit(player_img,(player_rect.x-scroll[0],player_rect.y-scroll[1]))
     display.blit(creeper_img,(creeper_rect.x-scroll[0],creeper_rect.y-scroll[1]))
 
-    print(player_rect.x, player_rect.y)
+    #print(player_rect.x, player_rect.y)
 
     if(player_rect.x == 2395 and player_rect.y == 515):
         player_rect.x = 32 

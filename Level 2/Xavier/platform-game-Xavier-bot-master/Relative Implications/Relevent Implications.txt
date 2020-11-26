@@ -2,16 +2,19 @@ Relevent Implications
 = = = = = = = = = = = =
 Aesthetics
 
+Aesthetics is the way something looks and if it looks good or pleasing.
 The game that i have created was designed to have an eerie look, especially with all the pink and purple tones.
 
 - - - - - - - - - - - - 
 Future Proofing
 
+Future Proofing is concerned with the ability to change the game quickly without having to rewrite the entire code or ensuring the game will limit the amount of issues in terms of updates.
 The code for this game is easy to update if necessary because, if there are any problems, it is easy to know where.
 
 - - - - - - - - - - - -
 Accessibility
 
-The code is accessible howver, the user must have the right programs eg. Visual studio code to run the program successfully.
+Accessibility is whether the product, game, etc is easy or can be used by all people including those with disabilities.
+The code is accessible howver, the user must have the right programs eg. Visual studio code to run the program successfully. The game only requires the arrow keys which makes it easier for people to play.
 
 - - - - - - - - - - - - 

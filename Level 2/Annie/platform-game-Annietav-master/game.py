@@ -66,6 +66,8 @@ def chasing(player_rect, ghost_rect):
     if((player_rect.x + PLAYER_W >= ghost_rect.x and player_rect.y + PLAYER_H >= ghost_rect.y) and (player_rect.x <= ghost_rect.x + GHOST_W and player_rect.y + PLAYER_H >= ghost_rect.y) and (player_rect.x + PLAYER_W >= ghost_rect.x and player_rect.y <= ghost_rect.y + GHOST_H) and (player_rect.x <= ghost_rect.x + GHOST_W and player_rect.y <= ghost_rect.y + GHOST_H)):
         player_rect.x = 100
         player_rect.y = 100
+        ghost_rect.x = 50
+        ghost_rect.y = 50
 
     return()
     
