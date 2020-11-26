@@ -1,0 +1,17 @@
+
+
+                                                            The Revelant implication
+
+
+The relevant implication of Intellectual Property. "There are many types of intellectual property, and some countries recognize more than others.
+ The most well-known types are copyrights, patents, trademarks, and trade secrets". We didn't copyright because the images we used
+ are from a public domain called Pixabay.com it is for free to download and to use. This why we used pixabay instead of google images. All the ideas and stories weren't 
+ playgirised and it was all the work from our group M.J.K.
+
+ The relevant implication of Future Proofing. Future-proofing is used in industries such as electronics, medical industry, industrial design, and more recently, in design for climate change.
+ Our website is easy to be updated. If the html or css need to be updated it is easy to be improved. Our website can be kept up to date
+ by making changes and git.push and git pull to save and download any new changes.  
+
+ The relevant implication of Functionality. Our website works very well and fast. There are no glitches or bugs and all links works well 
+ and correctly. This works on all browsers and devices. We have checked on all devices such as iphones and androids. We then checked if it could
+ work on Chrome and Micorsoft Edge and it was successfully and it caused no glitches and no bugs. 
