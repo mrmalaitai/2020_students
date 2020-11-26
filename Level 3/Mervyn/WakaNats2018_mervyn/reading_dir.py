@@ -1,28 +1,19 @@
-import tkinter as tk
-from os import walk
-"""
-def display_students(students):
-    display = tk.Toplevel(root)
-    
-    results = tk.Listbox(display)
-    for x in students:
-        adding_student = "{} {}".format(students[x], x)
-        results.insert(0, adding_student)
-    
-    results.grid(row = 0, column = 0)
-"""
+import tkinter as tk # Used for creating the GUI
+from os import walk # Used to read files and folders
+
+# The display_clubs function displays the clubs in order from most points to least points in a second GUI window
 def display_clubs(clubs):
     display = tk.Toplevel(root)
     display.title("Club Points")
-    display.iconbitmap("award.ico")
+    display.iconbitmap("icon.ico")
     
-    #Turn dictory into list
+    #Turn dictory into list to make it easier to sort in order
     points = [ [k,v] for k, v in clubs.items() ]
     
-    #Order List
+    #Order List from most points to least points
     points.sort(key = lambda x: x[1])
     
-    #Display list
+    #Displays the list of teams
     points_listbox = tk.Listbox(display, width = 39, height = 65, font = ("Calibri", 9))
     
     #Adds each team to the listbox "points_listbox"
@@ -37,7 +28,7 @@ def display_clubs(clubs):
     points_listbox.grid(row = 0, column = 0)
     print(points)
 
-
+# calculate_scores function calculates how many points that team has scored depending on their position in the .lif file
 def calculate_scores(current_year, final_races):
     clubs = {}
     
@@ -50,6 +41,7 @@ def calculate_scores(current_year, final_races):
             
             score = 0
             
+            # First place gets 8 points, Second gets 7 points and so on.
             if(points[0] == "1"):
                 score = 8
             elif(points[0] == "2"):
@@ -75,72 +67,47 @@ def calculate_scores(current_year, final_races):
             
         current_race.close()
     
-
-#    for x in clubs:
- #       print (x, clubs[x])
-  #      
-   #     for club in current_year:
-    #        club = club.strip().split(",")
-     #       if(club[1] not in clubs):
-      #          students[club[1]] = int(club[5])
-       #     else:
-        #        score = club.get(club[1]) + int(club[5])
-         #       club[club[1]] = score
-           
-        #current_year.close()
-    #display_club(clubs)
-
-            # Converting ito dictionary list
     display_clubs(clubs)
 
+# The display_files function loops through and finds all the files in the chosen directory
 def display_files():
     finals = []
     current_year = final_chosen.get()
     
+    # Loops through the folders and files while adding the necessary files from the necessary folder
     for root, dirs, files in walk("{}".format(current_year)):
         finals.extend(files)
         break
-    #print(races)
     
     final_races = []
     
-    FINAL_NAMES = ["Final"]
-    
+    # Loops through the files and grabs files with "Final" in it
     for final in finals:
         if("Final" in final):
             final_races.append(final)
-    #print(final_races)
     calculate_scores(current_year, final_races)
 	
-"""
-	files = []
-	finals = []
-	for root, dirs, file in walk("{}".format(final_chosen.get())):
-		files.extend(file)
-		print(files)
-		break
-	for file in files:
-		if "Final" in file:
-			finals.append(file)
-	print(finals)
-"""
 years = []
 
 for root, dirs, files in walk("."):
-	years.extend(dirs)
-	break
+    years.extend(dirs)
+    break
 
+# Constants for colours
 BG_COLOUR="#bb0000"
 FG_COLOUR="white"
+
 root = tk.Tk()
 
+# Adding a title and icon to the GUI
 root.title("Waka Ama Sprint Nationals")
 root.configure(bg=BG_COLOUR)
-root.iconbitmap("Level 3\Mervyn\WakaNats2018_mervyn\images\icon.ico")
+root.iconbitmap("icon.ico")
 
 #By: inipagi
 #https://icon-icons.com/icon/Trophy-winner-award/82485
 
+# Widgets used in the first GUI window (Label, OptionMenu, and Button)
 title = tk.Label(root, text = "Waka Ama Sprint Nationals race results and", font = ("Times New Roman",[14]), bg=BG_COLOUR, fg=FG_COLOUR)
 title.grid(row = 0, column = 0, columnspan = 3)
 
