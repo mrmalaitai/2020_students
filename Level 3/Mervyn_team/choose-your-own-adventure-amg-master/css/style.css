@@ -1,0 +1,97 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header"
+    "main";
+}
+
+.header{
+    grid-area: header;
+    text-align: center;
+}
+
+.main{
+    grid-area: main;
+    text-align: center;
+}
+
+.default{
+    background-image: url('../images/wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+p{
+    font-size: 31px;
+    font-family: Impact, Charcoal, sans-serif;
+    color: #e5e5e5;
+    text-shadow: 2px 2px #30343f;
+}
+.ending{
+    background-image: url('../images/sunrise.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+        
+}
+
+.container h1{
+    text-shadow: 4px 3px black;
+    font-size: 60px;
+    font-family: Impact, Charcoal, sans-serif;
+    color: #e5e5e5;
+}
+.video-background{
+    background-image: url('../images/nature.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+.container h2{
+    text-shadow: 4px 3px black;
+    font-size: 47px;
+    font-family: Impact, Charcoal, sans-serif;
+    color: #e5e5e5;
+
+}
+.hello{
+    background-image: url('../images/africa.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.navbar{
+    background-color: #ff4b5c;
+}
+
+.btn{
+    background-color: #ff4b5c;
+    font-family: Impact, Charcoal, sans-serif;
+    color: black;
+}
+
+.contact-form{
+    text-align: center;
+}
+
+/*hello*/
+
+@media screen and (max-width: 600px) {
+    .container h1{
+        font-size: 30px;
+    }
+
+    .container p{
+        font-size: 20px;
+    }
+    .container h2{
+        font-size: 20px;
+    }
+
+}

@@ -1,0 +1,17 @@
+Relevent Implications
+= = = = = = = = = = = =
+Aesthetics
+
+The game that i have created was designed to have an eerie look, especially with all the pink and purple tones.
+
+- - - - - - - - - - - - 
+Future Proofing
+
+The code for this game is easy to update if necessary because, if there are any problems, it is easy to know where.
+
+- - - - - - - - - - - -
+Accessibility
+
+The code is accessible howver, the user must have the right programs eg. Visual studio code to run the program successfully.
+
+- - - - - - - - - - - - 

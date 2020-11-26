@@ -1,0 +1,17 @@
+This is a comment from Mervyn
+hey guys
+This is another comment from Mervyn
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+Goeie more
+=======
+BOOM
+>>>>>>> 821c7a95ccd0e6b688e78b0fd14fb4aff2a31020
+=======
+Computer Studies Level 3
+>>>>>>> eb79ea3a0102c27d8767f2fc3d79eb02bcfb22dd
+=======
+             
+>>>>>>> 6de6e8b41eb0d0bd008772154539dea6e526620f

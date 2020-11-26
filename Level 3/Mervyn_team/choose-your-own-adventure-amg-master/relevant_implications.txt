@@ -1,0 +1,13 @@
+Relevant implications:
+Accessibility-
+Can anyone access it on any device?
+it is accessible for mobile phones and computers. Through using media query we are able to adjust the size of the the questions and text to suit mobile devices and computers.
+
+Aesthetics-
+The website is aestheticly pleasing to look at, with the images and bold text makes it easier to read. The website is consistent in the placing in text and writing. It contaoins consisitnecy of where the buttons and text are placed. The website displays are overrall similar style, and its easy to tell whether the pages are related or not.
+
+Although the website is based on a adventure film (text based) in a High school, the images used are to implicate an adventure vibe throughout the website. All the images used are from the public domain (pixabay.com)
+
+Functionality-
+Fortunetly there have been no bugs discovered so far but will require further testing in the future to discover some. The website works well and has no problems loading in so far.
+The Website loads quickly with no problems (so far). This is most likely due to not having multiple images and widgets that increase loading times. The simplistic design prevent these issues from happening. There are no glitches or bugs thus far but more testing may be required to discover if there are any. All links work correctly, and have no problems going to the pages they are linked too. Buttons work well. The website works on Chrome and Microsoft Edge with no problems, and should work with mobile device and other web browsers.
